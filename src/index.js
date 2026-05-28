@@ -5,6 +5,7 @@ const apiRoutes=require('./routes');
 
 const app=express();
 
+app.use(express.json());
 app.use(express.urlencoded({extended:true}));   //makes sure to read the url encoded stuff
 
 app.use('/api',apiRoutes);
